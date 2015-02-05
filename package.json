@@ -1,0 +1,41 @@
+{
+  "name": "bootstrap-customizer",
+  "version": "0.0.1",
+  "description": "Grunt realization of Twitter Bootstrap Web customizer (http://getbootstrap.com/customize)",
+  "keywords": [
+    "bootstrap",
+    "customizer"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "Artem Soltynsky",
+    "email": "artemkaint@gmail.com",
+    "url": "https://github.com/artemkaint"
+  },
+  "main": "lib",
+  "bin": {
+    "bower-requirejs": "bin/bootstrap-customizer.js"
+  },
+  "repository": "git@gitlab.nodasoft.com:artemkaint/bootstrap-customizer.git",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.2",
+    "less": "^2.3.1",
+    "lodash": "^3.1.0"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13",
+    "grunt-coffee-jshint": "^0.2.1",
+    "load-grunt-tasks": "^3.1.0"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "files": [
+    "bin",
+    "lib"
+  ]
+}
