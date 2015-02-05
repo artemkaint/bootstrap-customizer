@@ -28,6 +28,9 @@ module.exports = (opts, done) ->
     result
   )()
 
+  # Change vars with input data
+  varsData = _.extend varsData, opts.variables ? {}
+
   imports = ((filename) ->
     data = fs.readFileSync(filename)
     pattern = /@import "([\w\.-]+)";/g

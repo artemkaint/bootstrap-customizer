@@ -13,6 +13,16 @@ module.exports = (grunt) ->
         'lib/*.coffee'
       ]
 
+    # Push release tasks
+    push:
+      options:
+        files: ['package.json']
+        updateConfigs: ['pkg']
+        commitMessage: 'Version %VERSION%'
+        commitFiles: ['package.json']
+        tagName: '%VERSION%'
+        npm: true
+
   grunt.registerTask 'test', [
     'coffee_jshint'
   ]
