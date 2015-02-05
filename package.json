@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-customizer",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Node.js realization of Twitter Bootstrap Web customizer (http://getbootstrap.com/customize)",
   "keywords": [
     "bootstrap",
