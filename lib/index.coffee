@@ -51,7 +51,7 @@ module.exports = (opts, done) ->
 
   less.render(srcCode, options).then (output) ->
     fs.writeFileSync(opts.dest ? "bootstrap#{ if options.compress then 'min.' }.css", output.css) if opts.dest
-    done?(output)
+    done?(output.css)
   .catch (err) ->
     console.log(err)
     done?(null, err)
