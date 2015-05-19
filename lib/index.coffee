@@ -3,7 +3,7 @@
 path = require 'path'
 fs = require 'fs'
 _ = require 'lodash'
-less = require('less')
+less = require 'less'
 
 # Apply custom bootstrap params from json
 #
@@ -51,6 +51,7 @@ module.exports = (opts, done) ->
 
   less.render(srcCode, options).then (output) ->
     fs.writeFileSync(opts.dest ? "bootstrap#{ if options.compress then 'min.' }.css", output.css) if opts.dest
-    done?()
+    done?(output)
   .catch (err) ->
     console.log(err)
+    done?(null, err)
